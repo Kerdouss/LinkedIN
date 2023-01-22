@@ -35,6 +35,8 @@ public class LinkedTest {
         
        System.setProperty("webdriver.chrome.driver", "/Users/rachid/NetBeansProjects/data/chromedriver/chromedriver");
         driver = new ChromeDriver();
+       
+
         
     }
 
@@ -49,6 +51,8 @@ public class LinkedTest {
     driver.findElement(By.id("username")).sendKeys("linktestng@yahoo.com");
     driver.findElement(By.id("password")).sendKeys("Group3project");
     driver.findElement(By.xpath("//*[@id=\"organic-div\"]/form/div[3]/button")).click();
+    WebDriverWait wait = new WebDriverWait(driver, 30);
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"ember177\"]"))).click();
 
 
     
