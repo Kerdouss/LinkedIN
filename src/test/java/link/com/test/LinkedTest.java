@@ -35,8 +35,6 @@ public class LinkedTest {
         
        System.setProperty("webdriver.chrome.driver", "/Users/rachid/NetBeansProjects/data/chromedriver/chromedriver");
         driver = new ChromeDriver();
-       
-
         
     }
 
@@ -53,6 +51,11 @@ public class LinkedTest {
     driver.findElement(By.xpath("//*[@id=\"organic-div\"]/form/div[3]/button")).click();
     WebDriverWait wait = new WebDriverWait(driver, 30);
     wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"ember177\"]"))).click();
+    driver.findElement(By.xpath("//*[@id=\"global-nav\"]/div/nav/ul/li[3]/a/span")).click();
+    driver.findElement(By.id("jobs-search-box-keyword-id-ember216")).sendKeys("Software tester");
+    driver.findElement(By.id("jobs-search-box-location-id-ember1124")).sendKeys("Chicago,il");
+    
+    
 
 
     
